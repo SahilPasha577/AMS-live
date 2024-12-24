@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+.vide {
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 91vh;
+    /* overflow: hidden; */
+   
+}
+
+.vid {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: 0;  
+}
+
+
+
+.content-vid h1 {
+    font-size: 50px;
+    /* font-family: sans-serif; */
+    padding-top: 150px;
+}
+
+.butn-vid1 {
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 28px;
+    padding: 10px 20px;
+}
+
+.butn-vid :hover {
+    color: black;
+    background-color: white;
+}
+
+/* .vida div  :hover {
+    color: black !important;
+    background-color: white;
+} */
+
+/* .head1 b {
+    padding-top: 50px;
+}
+.content1 {
+    padding-right: 100px;
+} */
+
+.para {
+    font-size: 20px;
+}

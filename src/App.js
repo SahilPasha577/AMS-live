@@ -1,24 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Routes from './Authen/Routes';
+import { Footer } from './MyComp/Footer';
 
 function App() {
+
+  const USER_TYPES = {
+    Admin: "Admin_User",
+    Candidate: "Candidate_User",
+  }
+
+  const CURRENT_USER_TYPE = USER_TYPES.Admin;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes />
+      <Footer />
+    </>
   );
 }
 
