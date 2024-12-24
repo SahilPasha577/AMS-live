@@ -1,0 +1,30 @@
+name: Deploy React App
+
+on:
+  push:
+    branches:
+      - main  # Trigger deployment when changes are pushed to the main branch
+
+permissions:
+  id-token: write  # Needed for actions involving deployment
+  contents: read   # Needed to read contents for deployment
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3  # Checkout your repository code
+
+      - name: Install dependencies
+        run: npm install  # Install your project dependencies
+
+      - name: Build project
+        run: npm run build  # Build the React app
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3  # GitHub Pages deployment action
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Use the default GitHub token for deployment
+          publish_dir: ./build  # Path to your build directory
